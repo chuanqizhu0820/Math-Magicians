@@ -1,0 +1,35 @@
+button{
+    width: 75px;
+    height: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#display{
+    width: 99%;
+    height: 40px;
+    border: none;
+    background-color: rgb(165, 163, 163);
+}
+
+#display::placeholder{
+    color: white;
+    font-size: 1.25rem;
+    text-align: right;
+    padding: 8px;
+}
+
+.operators{
+    background-color: orange;
+}
+
+#zero{
+    width: 150px;
+}
+
+#keyboard{
+    width: 300px;
+    margin-top: 50px;;
+}
