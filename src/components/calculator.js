@@ -1,5 +1,7 @@
 import React from 'react';
 import './calculator.css';
+import { clearValue, getValue } from '../logic/operate';
+import { number, operator } from '../logic/calculate';
 
 /* eslint-disable */
 class Calculator extends React.Component {
@@ -10,12 +12,19 @@ class Calculator extends React.Component {
     };
   }
 
+  componentDidUpdate(){
+    // this.setState({
+    //   value: document.querySelector("#display").value
+    // })
+    console.log("run")
+  }
+
   render() {
     return (
       <div id="keyboard">
-        <input type="text" id="display" placeholder="0" value={this.state.value} />
+        <input type="text" id="display" placeholder="0"></input>
         <br />
-        <button type="button">AC</button>
+        <button type="button" onClick={clearValue}>AC</button>
         <button type="button">+/-</button>
         <button type="button">%</button>
         <button type="button" className="operators">/</button>
@@ -27,13 +36,13 @@ class Calculator extends React.Component {
         <button type="button">5</button>
         <button type="button">6</button>
         <button type="button" className="operators">-</button>
-        <button type="button">1</button>
+        <button type="button" onClick={()=>number(1)}>1</button>
         <button type="button">2</button>
         <button type="button">3</button>
-        <button type="button" className="operators">+</button>
+        <button type="button" onClick={()=>operator("+")} className="operators">+</button>
         <button type="button" id="zero">0</button>
         <button type="button">.</button>
-        <button type="button" className="operators">=</button>
+        <button type="button" onClick={getValue}className="operators">=</button>
       </div>
     );
   }
