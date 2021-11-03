@@ -1,16 +1,15 @@
-const current = [0, '', 0];
+const current = [null, '', null];
 
-export function number(value) {
-  document.querySelector('#display').value = value;
-  if (current[1] === '') {
-    current[0] = value;
-  } else {
-    current[2] = value;
+export default function getValue() {
+  let value;
+  if (current[1] === '+') {
+    value = current[0] + current[2];
+  } else if (current[1] === '*') {
+    value = current[0] * current[2];
   }
-}
-
-export function operator(operator) {
-  current[1] = operator;
+  document.querySelector('#display').value = value;
+  current[0] = value;
+  current[2] = null;
 }
 
 export { current };

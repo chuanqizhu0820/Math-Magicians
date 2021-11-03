@@ -1,17 +1,25 @@
-import { current } from './calculate';
+import getValue, { current } from './calculate';
 
 export function clearValue() {
   document.querySelector('#display').value = '0';
-  current[0] = 0;
+  current[0] = null;
   current[1] = '';
-  current[2] = 0;
+  current[2] = null;
 }
 
-export function getValue() {
-  if (current[1] === '+') {
-    const value = current[0] + current[2];
-    document.querySelector('#display').value = value;
+export function number(value) {
+  document.querySelector('#display').value = value;
+  if (current[1] === '') {
     current[0] = value;
-    current[2] = 0;
+  } else {
+    current[2] = value;
   }
+}
+
+export function operator(operator) {
+  document.querySelector('#display').value = operator;
+  if (current[2] !== null) {
+    getValue();
+  }
+  current[1] = operator;
 }
