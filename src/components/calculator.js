@@ -1,12 +1,19 @@
 import React from 'react';
 import './calculator.css';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class CalculatorUI extends React.Component {
+/* eslint-disable */
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+    };
+  }
+
   render() {
     return (
       <div id="keyboard">
-        <input type="text" id="display" placeholder="0" />
+        <input type="text" id="display" placeholder="0" value={this.state.value} />
         <br />
         <button type="button">AC</button>
         <button type="button">+/-</button>
@@ -31,5 +38,6 @@ class CalculatorUI extends React.Component {
     );
   }
 }
+/* eslint-enable */
 
-export default CalculatorUI;
+export default Calculator;
