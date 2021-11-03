@@ -8,17 +8,13 @@ button:hover {
 }
 
 #display {
-  width: 99%;
+  width: 98.5%;
   height: 40px;
   border: none;
   background-color: rgb(165, 163, 163);
-}
-
-#display::placeholder {
   color: white;
   font-size: 1.25rem;
   text-align: right;
-  padding: 8px;
 }
 
 .operators {

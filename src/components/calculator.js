@@ -25,7 +25,7 @@ class Calculator extends React.Component {
   render() {
     return (
       <div id="keyboard">
-        <input type="text" id="display" placeholder="0" value={this.state.obj.next ? this.state.obj.next : this.state.obj.total ? this.state.obj.total : 0}/>
+        <input type="text" id="display" value={this.state.obj.next ? this.state.obj.next : this.state.obj.total ? this.state.obj.total : 0}/>
         <br />
         <Button value="AC" storeFunc={this.storeObj}/>
         <Button value="+/-" storeFunc={this.storeObj}/>
