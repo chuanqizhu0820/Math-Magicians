@@ -1,5 +1,6 @@
 import React from 'react';
 import './calculator.css';
+import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
@@ -14,45 +15,91 @@ class Calculator extends React.Component {
     };
     this.storeObj = this.storeObj.bind(this);
   }
-/* eslint-disable*/
+
+  componentDidUpdate() {
+    const beep = document.querySelector('#beep');
+    beep.play();
+  }
+
   storeObj(e) {
-    let newObj = calculate(this.state.obj, e.target.value);
+    const { obj } = this.state;
+    const newObj = calculate(obj, e.target.value);
     this.setState({
       obj: newObj,
     });
   }
 
+  // }
+
   render() {
+    let someValue = '0';
+    const { obj } = this.state;
+    const { total, next } = obj;
+    if (next !== null) {
+      someValue = next;
+    } if (total !== null && next === null) {
+      someValue = total;
+    }
     return (
       <div id="keyboard">
-        <input type="text" id="display" value={this.state.obj.next ? this.state.obj.next : this.state.obj.total ? this.state.obj.total : 0}/>
+        <input
+          type="text"
+          id="display"
+          value={someValue}
+        />
         <br />
-        <Button value="AC" storeFunc={this.storeObj}/>
-        <Button value="+/-" storeFunc={this.storeObj}/>
-        <Button value="%" storeFunc={this.storeObj}/>   
-        <Button value="/" storeFunc={this.storeObj} className="operators" />  
-        <Button value="7" storeFunc={this.storeObj}/>    
-        <Button value="8" storeFunc={this.storeObj}/> 
-        <Button value="9" storeFunc={this.storeObj}/>
-        <Button value="*" storeFunc={this.storeObj} className="operators"/>  
-        <Button value="4" storeFunc={this.storeObj}/> 
-        <Button value="5" storeFunc={this.storeObj}/> 
-        <Button value="6" storeFunc={this.storeObj}/> 
-        <Button value="-" storeFunc={this.storeObj} className="operators"/> 
-        <Button value="1" storeFunc={this.storeObj}/>        
-        <Button value="2" storeFunc={this.storeObj}/> 
-        <Button value="3" storeFunc={this.storeObj}/> 
-        <Button value="+" storeFunc={this.storeObj} className="operators"/> 
-        <Button value="0" storeFunc={this.storeObj} id="zero"/> 
-        <Button value="." storeFunc={this.storeObj}/>
-        <Button value="=" storeFunc={this.storeObj} className="operators"/>  
+        <Button value="AC" storeFunc={this.storeObj} />
+        <Button value="+/-" storeFunc={this.storeObj} />
+        <Button value="%" storeFunc={this.storeObj} />
+        <Button value="/" storeFunc={this.storeObj} className="operators" />
+        <Button value="7" storeFunc={this.storeObj} />
+        <Button value="8" storeFunc={this.storeObj} />
+        <Button value="9" storeFunc={this.storeObj} />
+        <Button value="*" storeFunc={this.storeObj} className="operators" />
+        <Button value="4" storeFunc={this.storeObj} />
+        <Button value="5" storeFunc={this.storeObj} />
+        <Button value="6" storeFunc={this.storeObj} />
+        <Button value="-" storeFunc={this.storeObj} className="operators" />
+        <Button value="1" storeFunc={this.storeObj} />
+        <Button value="2" storeFunc={this.storeObj} />
+        <Button value="3" storeFunc={this.storeObj} />
+        <Button value="+" storeFunc={this.storeObj} className="operators" />
+        <Button value="0" storeFunc={this.storeObj} id="zero" />
+        <Button value="." storeFunc={this.storeObj} />
+        <Button value="=" storeFunc={this.storeObj} className="operators" />
       </div>
     );
   }
 }
 
-function Button(props){
-  return <button type="button" onClick={props.storeFunc} value={props.value} className={props.className} id={props.id}>{props.value}</button>
-}
-/* eslint-enable */
+const Button = (props) => {
+  const {
+    storeFunc = '', value = '', className = '', id = '',
+  } = props;
+  return (
+    <button
+      type="button"
+      onClick={storeFunc}
+      value={value}
+      className={className}
+      id={id}
+    >
+      {value}
+    </button>
+  );
+};
+
+Button.defaultProps = {
+  storeFunc: null,
+  value: null,
+  className: null,
+  id: null,
+};
+
+Button.propTypes = {
+  storeFunc: PropTypes.func,
+  value: PropTypes.string,
+  className: PropTypes.string,
+  id: PropTypes.string,
+};
 export default Calculator;
