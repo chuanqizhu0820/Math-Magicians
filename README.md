@@ -1,6 +1,6 @@
 # Math-Magicians App
-Microverse Program Project
 
+Microverse Program Project
 
 ## Built With
 
