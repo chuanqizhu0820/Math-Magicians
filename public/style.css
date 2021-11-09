@@ -1,56 +1,49 @@
-body{
+body {
   width: 70vw;
   margin-left: 15vw;
 }
 
-#headline{
+#headline {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#navbar{
+#navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.navlink{
+.navlink {
   font-size: 1.5rem;
   margin-right: 20px;
 }
 
-#calpage{
+#calpage {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-#cal-intro{
+#cal-intro {
   font-size: 1.5rem;
   margin-top: 5vh;
   width: 30vw;
 }
 
-
-#quotepage{
+#quotepage {
   margin-top: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#quote{
+#quote {
   font-size: 1.9rem;
 }
 
-#author{
+#author {
   font-size: 1.5rem;
   font-style: italic;
 }
-
-
-
-
-
-
