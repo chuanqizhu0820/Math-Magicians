@@ -41,32 +41,38 @@ class Calculator extends React.Component {
       someValue = total;
     }
     return (
-      <div id="keyboard">
-        <input
-          type="text"
-          id="display"
-          value={someValue}
-        />
-        <br />
-        <Button value="AC" storeFunc={this.storeObj} />
-        <Button value="+/-" storeFunc={this.storeObj} />
-        <Button value="%" storeFunc={this.storeObj} />
-        <Button value="/" storeFunc={this.storeObj} className="operators" />
-        <Button value="7" storeFunc={this.storeObj} />
-        <Button value="8" storeFunc={this.storeObj} />
-        <Button value="9" storeFunc={this.storeObj} />
-        <Button value="*" storeFunc={this.storeObj} className="operators" />
-        <Button value="4" storeFunc={this.storeObj} />
-        <Button value="5" storeFunc={this.storeObj} />
-        <Button value="6" storeFunc={this.storeObj} />
-        <Button value="-" storeFunc={this.storeObj} className="operators" />
-        <Button value="1" storeFunc={this.storeObj} />
-        <Button value="2" storeFunc={this.storeObj} />
-        <Button value="3" storeFunc={this.storeObj} />
-        <Button value="+" storeFunc={this.storeObj} className="operators" />
-        <Button value="0" storeFunc={this.storeObj} id="zero" />
-        <Button value="." storeFunc={this.storeObj} />
-        <Button value="=" storeFunc={this.storeObj} className="operators" />
+      <div id="calpage">
+        <div id="cal-intro">
+          {/* eslint-disable-next-line */}
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis id numquam assumenda laborum totam error veniam velit, tenetur explicabo, debitis quos! Numquam cum quaerat provident adipisci atque dolorum voluptatem accusamus!</p>
+        </div>
+        <div id="keyboard">
+          <input
+            type="text"
+            id="display"
+            value={someValue}
+          />
+          <br />
+          <Button value="AC" storeFunc={this.storeObj} />
+          <Button value="+/-" storeFunc={this.storeObj} />
+          <Button value="%" storeFunc={this.storeObj} />
+          <Button value="/" storeFunc={this.storeObj} className="operators" />
+          <Button value="7" storeFunc={this.storeObj} />
+          <Button value="8" storeFunc={this.storeObj} />
+          <Button value="9" storeFunc={this.storeObj} />
+          <Button value="*" storeFunc={this.storeObj} className="operators" />
+          <Button value="4" storeFunc={this.storeObj} />
+          <Button value="5" storeFunc={this.storeObj} />
+          <Button value="6" storeFunc={this.storeObj} />
+          <Button value="-" storeFunc={this.storeObj} className="operators" />
+          <Button value="1" storeFunc={this.storeObj} />
+          <Button value="2" storeFunc={this.storeObj} />
+          <Button value="3" storeFunc={this.storeObj} />
+          <Button value="+" storeFunc={this.storeObj} className="operators" />
+          <Button value="0" storeFunc={this.storeObj} id="zero" />
+          <Button value="." storeFunc={this.storeObj} />
+          <Button value="=" storeFunc={this.storeObj} className="operators" />
+        </div>
       </div>
     );
   }
