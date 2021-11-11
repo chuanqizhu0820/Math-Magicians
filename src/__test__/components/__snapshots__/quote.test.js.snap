@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<a
+  href="https://chuanqizhu0820.github.io/math-magicians/quote"
+>
+  Home
+</a>
+`;
