@@ -48,6 +48,7 @@ class Calculator extends React.Component {
         </div>
         <div id="keyboard">
           <input
+            data-testid="input"
             type="text"
             id="display"
             value={someValue}

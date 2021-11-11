@@ -3,7 +3,7 @@ import React from 'react';
 function Home() {
   return (
     <div>
-      <h3>Welcome to the math playground!</h3>
+      <h3 data-testid="intro-headline">Welcome to the math playground!</h3>
       <div id="home-intro">
         {/* eslint-disable */}
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, dolor optio aut quo quibusdam dolorum eum? Ex quos quaerat dignissimos laboriosam in consequatur molestiae non consequuntur eius tempore eos similique praesentium illo quae expedita animi maiores, ut adipisci dolor atque excepturi exercitationem explicabo, iure dolore! Illo asperiores iusto optio ea, itaque perspiciatis expedita deleniti fugiat ipsa totam. Fuga minus corporis quae voluptatem odit, dignissimos ea architecto deserunt rerum beatae, animi maxime eligendi consequuntur alias, nobis quasi similique pariatur? Similique quis excepturi suscipit repellat quas sequi ducimus at ex sunt harum, architecto sit rem dignissimos eaque fugit incidunt optio voluptatibus dicta!</p>
