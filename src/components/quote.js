@@ -6,7 +6,7 @@ function Quote() {
       <div id="quote">
         <p>Calculators can only calculate - they cannot do mathematics.</p>
       </div>
-      <div id="author">
+      <div id="author" data-testid="author">
         <p>John A. Van de Walle</p>
       </div>
 

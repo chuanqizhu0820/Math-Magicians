@@ -7,7 +7,7 @@ function Link(props) {
 
 test('renders correctly', () => {
   const tree = renderer
-    .create(<Link page="https://localhost:3000/calculator">Home</Link>)
+    .create(<Link page="https://chuanqizhu0820.github.io/math-magicians/calculator">Home</Link>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -18,13 +18,13 @@ class App extends React.Component {
           <h1>Math Magician</h1>
           <div id="navbar">
             <div className="navlink">
-              <Link to="/">Home</Link>
+              <Link to="/" data-testid="home-link">Home</Link>
             </div>
             <div className="navlink">
-              <Link to="/calculator">Calculator</Link>
+              <Link to="/calculator" data-testid="calc-link">Calculator</Link>
             </div>
             <div className="navlink">
-              <Link to="/quote">Quote</Link>
+              <Link to="/quote" data-testid="quote-link">Quote</Link>
             </div>
           </div>
         </div>

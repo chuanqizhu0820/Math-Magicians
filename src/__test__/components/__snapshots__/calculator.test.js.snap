@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <a
-  href="https://localhost:3000/calculator"
+  href="https://chuanqizhu0820.github.io/math-magicians/calculator"
 >
   Home
 </a>
